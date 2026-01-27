@@ -4,6 +4,6 @@ use App\Core\Router;
 $router = new router();
 $router-> run();
 {
-    echo ' Router is running';
+   
 }
 ?>
