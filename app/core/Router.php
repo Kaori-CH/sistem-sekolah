@@ -7,10 +7,25 @@ class Router
 
 {
 
+private array $routers =[];
+public function add (string $method,string $uri,string $controller, string $function)
+{
+    $this ->routers[]=
+    [
+        'method' => $method,
+        'uri' => $uri,
+        'controller' => $controller,
+        'function'=> $function
+    ];
+}
     public function run ()
     {
         $method = $_SERVER ['REQUEST_METHOD'];
         $uri = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
+        foreach ($this->router as $route)
+        {
+            
+        }
 
         if ($method== 'GET' && $uri =='/students')
             {
